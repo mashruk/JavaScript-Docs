@@ -93,7 +93,7 @@ Creating an instance of Employee and logging the instance( *`me`* ) we get
 const me = new Employee('Andrew','Mead',27,'Teacher',['Teaching','Biking'])
 console.log(me)
 ```
-![image](img/class-output.jpg)
+![image](/img/class-output.jpg)
 
 Creating an instance of Student and logging the instance( *`student`* ) we get
 #### OUTPUT:
@@ -104,7 +104,6 @@ console.log(student.getStatus())
 student.updateGrade(1)
 console.log(`Points : ${student.grade}`)
 console.log(student.getStatus())
-
 ```
-![image](img/class-output-2.jpg)
+![image](./img/class-output-2.jpg)
 
