@@ -105,5 +105,5 @@ student.updateGrade(1)
 console.log(`Points : ${student.grade}`)
 console.log(student.getStatus())
 ```
-![image](https://github.com/mashruk/markdown/blob/master/img/class-output-2.JPG.jpg)
+![image](https://github.com/mashruk/markdown/blob/master/img/class-output-2.JPG)
 
