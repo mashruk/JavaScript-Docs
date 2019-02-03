@@ -199,6 +199,7 @@ console.log(me.fullName)
 console.log(me.getBio())
 // Max Payne is a Teacher
 ```
+<<<<<<< HEAD
 
 
 
@@ -208,3 +209,5 @@ console.log(me.getBio())
 
 
 
+=======
+>>>>>>> 03551ef034571b231215c5ffa7839daced599f08
