@@ -107,3 +107,98 @@ console.log(student.getStatus())
 ```
 ![image](img/class-output-2.JPG)
 
+## Getters and Setters
+
+
+```javascript
+const data = {
+    locations : [],
+
+    _location : '',
+    
+    get location() {
+        return this._location
+    },
+    
+    set location(value) {
+        this._location = value.trim()
+        this.locations.push(this._location)
+    }
+}
+
+console.log(data)
+// { locations: [], _location: '', location: [Getter/Setter] }
+
+data.location ='Alaska'
+data.location ='Atlanta' 
+
+console.log(data.locations)
+// [ 'Alaska', 'Atlanta' ]
+
+console.log(data.location)
+// Atlanta
+```
+
+With the Class Syntax, it can be used as follows
+
+```javascript
+// class
+class Person {
+    constructor(firstName, lastName, age, likes = []){
+        this.firstName = firstName
+        this.lastName = lastName
+        this.age = age
+        this.likes = likes
+    }
+    getBio(){
+        let bio = `${this.firstName} is ${this.age}.`
+        this.likes.forEach((like) => {
+            bio = bio + ` ${this.firstName} likes ${like}`
+        })
+        return bio
+    }
+    // setter -> fullName
+    set fullName(fullName){
+        const names = fullName.split(' ')
+        this.firstName = names[0]
+        this.lastName = names[1]
+    }
+    // getter -> fullName
+    get fullName(){
+        return `${this.firstName} ${this.lastName}` 
+    }        
+}
+
+// subclass: Employee
+class Employee extends Person{
+    constructor(firstName,lastName,age,position,likes){
+        super(firstName,lastName,age,likes)
+        this.position = position
+    }
+    // getBio calling the getter fullName
+    getBio(){
+        return `${this.fullName} is a ${this.position}`
+    }
+    getYearsLeft(){
+        return 65 - this.age
+    }
+}
+```
+**OUTPUT**:
+
+```javascript
+const me = new Employee('Andrew','Mead',27,'Teacher',['Teaching','Biking'])
+me.fullName = 'Max Payne'
+
+console.log(me.firstName)
+// Max
+console.log(me.lastName)
+// Payne
+console.log(me.fullName)
+// Max Payne
+console.log(me.getBio())
+// Max Payne is a Teacher
+```
+
+
+
