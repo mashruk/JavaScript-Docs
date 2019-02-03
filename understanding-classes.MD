@@ -201,10 +201,6 @@ console.log(me.getBio())
 ```
 
 
-> Hello World
-
-## Understanding the context api
-
 
 
 
