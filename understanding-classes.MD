@@ -199,15 +199,17 @@ console.log(me.fullName)
 console.log(me.getBio())
 // Max Payne is a Teacher
 ```
-<<<<<<< HEAD
 
+# Hangman Game
 
+```js
+class Hangman {
+   constructor(word, remainingGuesses) {
+      this.word = word.toLowerCase().split('');
+      this.remainingGuesses = remainingGuesses;
+      this.guessedWords = [];
+      this.status = 'playing';
+   }
 
-
-
-
-
-
-
-=======
->>>>>>> 03551ef034571b231215c5ffa7839daced599f08
+}
+```
